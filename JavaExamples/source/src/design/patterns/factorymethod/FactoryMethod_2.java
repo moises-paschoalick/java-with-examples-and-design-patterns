@@ -1,3 +1,5 @@
+package design.patterns.factorymethod;
+
 public class FactoryMethod_2 {
     // Criador Concreto  (classe que cria um objeto, criar a instância)
     // Produto Abstrado (objeto que está sendo criado)

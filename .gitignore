@@ -1,0 +1,62 @@
+# =========================
+# IntelliJ IDEA
+# =========================
+JavaExamples/.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# =========================
+# Maven
+# =========================
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# =========================
+# Gradle
+# =========================
+.gradle/
+build/
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Sistema Operacional
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Arquivos temporários
+# =========================
+*.tmp
+*.temp
+*.swp
+*~
+
+# =========================
+# Configurações locais
+# =========================
+.env
+application-local.yml
+application-local.properties
+
+# =========================
+# Java
+# =========================
+*.class
+
+# =========================
+# VS Code (caso use junto)
+# =========================
+.vscode/

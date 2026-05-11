@@ -1,5 +1,5 @@
-import entities.Order;
-import entities.enums.OrderStatus;
+import streams.entities.Order;
+import streams.entities.enums.OrderStatus;
 
 import java.util.Date;
 

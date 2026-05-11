@@ -1,3 +1,5 @@
+package design.patterns.factorymethod;
+
 public class FactoryMethod_1 {
 
     // Criador Abstrato
