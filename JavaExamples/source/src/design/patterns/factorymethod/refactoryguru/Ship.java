@@ -14,8 +14,8 @@ public class Ship implements Transport{
     }
 
     @Override
-    public void delivery() {
-        System.out.println("Delivering by land using ship");
+    public void deliver() {
+        System.out.println("Delivering by sea using ship");
     }
 
 }

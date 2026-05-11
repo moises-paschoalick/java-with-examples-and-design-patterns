@@ -9,7 +9,7 @@ abstract class Logistics {
     public void planDelivery() {
         // A classe abstrata NÃO SABE qual transporte será criado.
         Transport transport = createTransport();
-        transport.delivery();
+        transport.deliver();
     }
 
     // Antes vários if
