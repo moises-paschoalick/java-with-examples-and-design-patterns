@@ -45,3 +45,5 @@ e a classe decide qual objeto criar.
 
 [Exemplo FactoryMehtod_4](FACTORY_METHOD_4.md)
 
+[Exemplo FactoryMehtod_5](FACTORY_METHOD_5.md) Exemplo Livro GoF 
+
