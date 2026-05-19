@@ -1,28 +1,38 @@
 package design.patterns.adapter;
 
 import java.math.BigDecimal;
+// Usando Composição
 
 // Adapter ou Wrapper (embrulho)
-
 // Essa forma não está no livro GoF (é uma simplificação)
 
-public class Adapter_1 {
+
+public class Adapter_2 {
 
     // Client (método main)
     // Adapter MeuPagamentoCredito
     // Adaptee -> Quem está sendo adaptado -> SdkPagamentoCredito
+    // -> Target -> Alvo (Implementação que quero fazer)
 
     public static void main(String[] args) {
-        MeuPagamentoCredito credito = new MeuPagamentoCredito();
+        // Define a interface
+        ProcessorPagamento2 credito = new MeuPagamentoCredito2();
         credito.debitar(new BigDecimal("100"));
     }
 }
+// -----------------------------------------------------------
+// Interface é um contrato
+interface ProcessorPagamento2 {
+    void debitar(BigDecimal valor);
+    void creditar(BigDecimal valor);
+}
+
 
 // -----------------------------------------------------------
 
-class MeuPagamentoCredito { // você tem acesso (com se fosse .jar ou lib no maven)
+class MeuPagamentoCredito2 implements ProcessorPagamento2 { // você tem acesso (com se fosse .jar ou lib no maven)
 
-    SdkPagamentoCredito sdkPagamentoCredito = new SdkPagamentoCredito();
+    SdkPagamentoCredito2 sdkPagamentoCredito = new SdkPagamentoCredito2();
 
     // Está embrulhando
     public void debitar(BigDecimal valor) {
@@ -38,7 +48,8 @@ class MeuPagamentoCredito { // você tem acesso (com se fosse .jar ou lib no mav
 
 // -----------------------------------------------------------
 
-class SdkPagamentoCredito { // sdk fechada! você não tem acesso!
+class SdkPagamentoCredito2 { // sdk fechada! você não tem acesso!
+    // posso ate ter acesso, mas não convém alterar
     public void autorizar(BigDecimal valor) {
         // autoriza
     }
