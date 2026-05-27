@@ -12,7 +12,7 @@ public class CodigoSemStrategy {
 
     }
 
-    public static  BigDecimal calculate(BigDecimal amount, String taxType) {
+    public static BigDecimal calculate(BigDecimal amount, String taxType) {
 
         if (taxType.equals("ICMS")) {
             return calculatePercent(amount, 4);
