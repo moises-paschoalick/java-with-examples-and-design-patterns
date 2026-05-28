@@ -3,8 +3,11 @@ package famework.service;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
+
 public class TaxCalculator {
 
+    /*
+    // Sem usar o Strategy
     public BigDecimal calculate(BigDecimal amount, String taxType) {
 
         //Fere os princípios SOLID
@@ -40,6 +43,20 @@ public class TaxCalculator {
         return amount
                 .multiply(BigDecimal.valueOf(percent))
                 .divide(BigDecimal.valueOf(100), 2, RoundingMode.HALF_UP);
+    }*/
+
+    // Com Strategy
+
+    private TaxTypeStrategy taxType;
+
+    public BigDecimal calculate(BigDecimal amount) {
+        return taxType.calculate(amount);
+        //throw new IllegalArgumentException("Invalid tax type");
     }
+
+    public void setTaxType(TaxTypeStrategy taxType) {
+        this.taxType = taxType;
+    }
+
 
 }

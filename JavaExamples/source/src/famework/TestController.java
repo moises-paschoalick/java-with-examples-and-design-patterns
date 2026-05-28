@@ -11,7 +11,10 @@ public class TestController {
 
         TaxRequestDTO request = new TaxRequestDTO();
         request.setAmount(new BigDecimal(100.00));
-        request.setTaxType("ICMS");
+        //request.setTaxType("ICMS");
+        //request.setTaxType("IPI");
+        request.setTaxType("ISS");
+        //request.setTaxType("NAOEXISTE");
 
         TaxController taxController = new TaxController();
         taxController.calculate(request);
