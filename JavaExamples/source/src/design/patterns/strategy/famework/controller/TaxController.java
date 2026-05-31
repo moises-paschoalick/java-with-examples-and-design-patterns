@@ -1,7 +1,7 @@
-package famework.controller;
+package design.patterns.strategy.famework.controller;
 
-import famework.dto.TaxRequestDTO;
-import famework.service.*;
+import design.patterns.strategy.famework.dto.TaxRequestDTO;
+import design.patterns.strategy.famework.service.*;
 
 import java.math.BigDecimal;
 
@@ -10,8 +10,8 @@ public class TaxController {
     private TaxCalculator serviceTaxCalculator = new TaxCalculator();
 
     public TaxController() {
-
     }
+
     public TaxController(TaxCalculator taxCalculator){
         this.serviceTaxCalculator = taxCalculator;
     }
@@ -45,6 +45,19 @@ public class TaxController {
         Existe outro padrão que resolve esse problema dos IFs que é o Factory
        */
 
+        /*
+        O Fluxo correto do Strategy
+        Controller
+            ↓
+        switch
+            ↓
+        TaxCalculator.setStrategy()
+            ↓
+        TaxCalculator.calculate()
+            ↓
+        ISS.calculate()
+        */
+
         TaxTypeStrategy taxStrategy = switch (taxType) {
            case "ISS" -> new ISS();
            case "ICMS" -> new ICMS();
@@ -55,6 +68,7 @@ public class TaxController {
            }
         };
 
+        serviceTaxCalculator.setTaxType(taxStrategy);
         BigDecimal tax = taxStrategy.calculate(amount);
 
         System.out.println("---- response ----");

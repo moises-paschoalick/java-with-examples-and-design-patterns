@@ -1,4 +1,4 @@
-package famework.dto;
+package design.patterns.strategy.famework.dto;
 
 import java.math.BigDecimal;
 

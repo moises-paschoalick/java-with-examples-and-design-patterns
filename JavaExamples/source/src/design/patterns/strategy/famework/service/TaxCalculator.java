@@ -1,7 +1,6 @@
-package famework.service;
+package design.patterns.strategy.famework.service;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 
 
 public class TaxCalculator {

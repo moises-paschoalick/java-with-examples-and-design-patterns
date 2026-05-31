@@ -1,7 +1,7 @@
-package famework;
+package design.patterns.strategy.famework;
 
-import famework.controller.TaxController;
-import famework.dto.TaxRequestDTO;
+import design.patterns.strategy.famework.controller.TaxController;
+import design.patterns.strategy.famework.dto.TaxRequestDTO;
 
 import java.math.BigDecimal;
 
