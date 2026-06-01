@@ -1,10 +1,7 @@
 package design.patterns.simpleFactory.framework.controller;
 
 import design.patterns.simpleFactory.framework.dto.NotificationRequestDTO;
-import design.patterns.simpleFactory.framework.service.EmailNotification;
-import design.patterns.simpleFactory.framework.service.NotificationType;
-import design.patterns.simpleFactory.framework.service.SlackNotification;
-import design.patterns.simpleFactory.framework.service.SmsNotification;
+import design.patterns.simpleFactory.framework.service.*;
 
 public class NotificationController {
 
@@ -16,8 +13,10 @@ public class NotificationController {
         String recipient = request.getRecipeient();
         String message = request.getMessage();
 
-        NotificationType notification = null;
+        //NotificationType notification = null;
 
+        // Leva a lógica para factory
+        /*
         if(notificationType.equals("email")) {
             notification = new EmailNotification();
         }
@@ -29,12 +28,12 @@ public class NotificationController {
         if(notificationType.equals("slack")) {
             notification = new SlackNotification();
         }
+         */
 
+        NotificationType notification = NotificationFactory.create(notificationType);
         notification.send(message, recipient);
-
         //return new Response("Notification enviado com sucesso");
         System.out.println("Notification enviado com sucesso");
-
     }
 
 }

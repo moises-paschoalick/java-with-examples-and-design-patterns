@@ -11,7 +11,9 @@ public class TestSimpleFactory {
         NotificationRequestDTO requestDTO = new NotificationRequestDTO();
         requestDTO.setRecipeient("@joao.silva");
         requestDTO.setMessage("Olá essa é a mensagem");
-        requestDTO.setNotificationType("slack");
+        //requestDTO.setNotificationType("slack");
+        //requestDTO.setNotificationType("sms");
+        requestDTO.setNotificationType("whatsapp");
 
         notificationController.sendNotification(requestDTO);
 
