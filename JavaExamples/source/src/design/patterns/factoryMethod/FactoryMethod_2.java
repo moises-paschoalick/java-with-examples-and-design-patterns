@@ -1,4 +1,4 @@
-package design.patterns.factorymethod;
+package design.patterns.factoryMethod;
 
 public class FactoryMethod_2 {
     // Criador Concreto  (classe que cria um objeto, criar a instância)

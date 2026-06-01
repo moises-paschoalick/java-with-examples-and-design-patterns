@@ -37,7 +37,7 @@ qual implementação concreta criar
 # Código completo
 
 ```java
-package design.patterns.factorymethod;
+package design.patterns.factoryMethod;
 
 public class FactoryMethod_3 {
 

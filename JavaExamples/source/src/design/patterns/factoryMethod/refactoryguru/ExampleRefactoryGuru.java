@@ -1,4 +1,4 @@
-package design.patterns.factorymethod.refactoryguru;
+package design.patterns.factoryMethod.refactoryguru;
 
 // https://refactoring.guru/design-patterns/factory-method
 public class ExampleRefactoryGuru {

@@ -1,4 +1,4 @@
-package design.patterns.factorymethod;
+package design.patterns.factoryMethod;
 
 import java.text.NumberFormat;
 import java.util.Calendar;

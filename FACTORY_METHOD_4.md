@@ -19,7 +19,7 @@ Mesmo sem perceber.
 # Código completo
 
 ```java
-package design.patterns.factorymethod;
+package design.patterns.factoryMethod;
 
 import java.text.NumberFormat;
 import java.util.Calendar;

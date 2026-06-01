@@ -20,7 +20,7 @@ No `FactoryMethod_2`:
 # Código completo
 
 ```java
-package design.patterns.factorymethod;
+package design.patterns.factoryMethod;
 
 public class FactoryMethod_1 {
 
@@ -39,7 +39,7 @@ public class FactoryMethod_1 {
         Categoria categoria = new Digital();
         Produto produto = categoria.novoProduto();
 
-        Categoria fisico  = new Fisico();
+        Categoria fisico = new Fisico();
         Produto produtoFisico = fisico.novoProduto();
     }
 }
@@ -72,11 +72,11 @@ interface Categoria {
 // Criador Concreto
 class Digital implements Categoria {
 
-   @Override
-   public Produto novoProduto() {
-       System.out.println("Criando produto Digital...");
-       return new ProdutoDigital();
-   }
+    @Override
+    public Produto novoProduto() {
+        System.out.println("Criando produto Digital...");
+        return new ProdutoDigital();
+    }
 }
 
 // Criador Concreto
