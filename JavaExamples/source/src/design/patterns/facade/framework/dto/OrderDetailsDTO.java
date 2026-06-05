@@ -41,4 +41,15 @@ public class OrderDetailsDTO {
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
+
+    @Override
+    public String toString() {
+        return "\nDetalhes do produto \n" +
+                "-------------------------"+
+                "\nproductId=" + productId +
+                "\namount=" + amount +
+                "\nemail='" + email + '\'' +
+                "\nquantity=" + quantity +
+                "\n-------------------------";
+    }
 }
