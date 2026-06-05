@@ -31,6 +31,12 @@ public class TestState {
 
         System.out.println(pedido.getEstado());
 
+        System.out.println("---------- Teste Cancelar ----------------");
+
+        Pedido pedido2 = new Pedido();
+        pedido2.preparar();
+        pedido2.cancelarPedido();
+        pedido2.iniciarEntrega();
 
     }
 

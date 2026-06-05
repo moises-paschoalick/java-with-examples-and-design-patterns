@@ -18,4 +18,9 @@ public class EntregaIniciada implements EstadoPedido {
     public void finalizarEntrega(Pedido pedido) {
         pedido.setEstado(new EntregaFinalizada());
     }
+
+    @Override
+    public void cancelar(Pedido pedido) {
+        throw new IllegalStateException("Pedido já saiu para o cliente não pode ser cancelado");
+    }
 }

@@ -4,7 +4,6 @@ import design.patterns.state.Pedido;
 
 public class Realizado implements EstadoPedido {
 
-
     @Override
     public void preparar(Pedido pedido) {
         pedido.setEstado(new Preparando());
@@ -18,5 +17,10 @@ public class Realizado implements EstadoPedido {
     @Override
     public void finalizarEntrega(Pedido pedido) {
         throw new IllegalStateException("Pedido está sendo realizado");
+    }
+
+    @Override
+    public void cancelar(Pedido pedido) {
+        pedido.setEstado(new Cancelado());
     }
 }

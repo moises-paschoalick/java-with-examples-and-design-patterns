@@ -18,4 +18,9 @@ public class Preparando implements EstadoPedido {
     public void finalizarEntrega(Pedido pedido) {
         throw new IllegalStateException("Pedido não pode ser finalizado pois ainda está sendo preparado");
     }
+
+    @Override
+    public void cancelar(Pedido pedido) {
+        pedido.setEstado(new Cancelado());
+    }
 }

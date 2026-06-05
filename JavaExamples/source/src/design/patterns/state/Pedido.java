@@ -47,6 +47,10 @@ public class Pedido {
         this.estado.finalizarEntrega(this);
     }
 
+    public void cancelarPedido() {
+        this.estado.cancelar(this);
+    }
+
 
     public void setEstado(EstadoPedido estado) {
         this.estado = estado;
