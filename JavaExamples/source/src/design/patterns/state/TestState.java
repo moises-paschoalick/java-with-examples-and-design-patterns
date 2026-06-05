@@ -3,7 +3,8 @@ package design.patterns.state;
 public class TestState {
 
     public static void main(String[] args) {
-
+        /*
+        Antes de aplicar o padrão state
 
         Pedido pedido = new Pedido();
         System.out.println(pedido.getEstado());
@@ -14,14 +15,26 @@ public class TestState {
         //Get e Setter sem comportamento, fere o
         //princípio básico do OO que é o encapsulamento
 
-        //Tell don't ask
+        //Tell don't ask (diga não pergunte)
         //Aqui está perguntando qual é o estado
 
         if(pedido.getEstado() == "EntregaIniciadaa"){ // Caso tiver errado
             System.out.println("Enviar uma notificação para o cliente");
-        }
+        }*/
+
+        System.out.println("---------- Início ----------------");
+        Pedido pedido = new Pedido();
+        //pedido.iniciarEntrega(); // Exception
+        pedido.preparar();
+        pedido.iniciarEntrega();
+        pedido.finalizarEntrega();
+
+        System.out.println(pedido.getEstado());
+
 
     }
+
+
 
 
 }
